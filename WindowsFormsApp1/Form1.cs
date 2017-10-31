@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
             this.button1.Enabled = true;
             errorMsg.Text = " ";
             int id = Convert.ToInt32(listBox1.SelectedItem.ToString().Split('.')[0]);
+            // try with array
             selected = Process.GetProcessById(id);
             LabelFiller();
         }
@@ -141,6 +142,11 @@ namespace WindowsFormsApp1
             {
                 isChanges = true;
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
